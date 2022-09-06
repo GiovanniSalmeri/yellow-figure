@@ -21,7 +21,7 @@ class YellowFigure {
                     $captionId = "caption-".uniqid();
                     $captionElement = "<figcaption id=\"".$captionId."\">".$caption."</figcaption>\n";
                     preg_match('/ class="([^"]*)"/', $imageElement, $matches);
-                    $class = $matches ? " class=\"figure ".$matches[1]."\"" : "class=\"figure\"";
+                    $class = " class=\"figure".($matches ? " ".$matches[1] : "")."\"";
                     preg_match('/ width="([^"]+)"/', $imageElement, $matches);
                     $width = $matches ? $matches[1] : "";
                     if (is_numeric($width)) $width .= "px";
