@@ -26,7 +26,7 @@ class YellowFigure {
                     $width = $matches ? $matches[1] : "";
                     if (is_numeric($width)) $width .= "px";
                     $imageElement = preg_replace('/ class="[^"]*"/', "", $imageElement);
-                    $imageElement = preg_replace('/ alt="[^"]*"/', " alt=\"\"", $imageElement);
+                    $imageElement = preg_replace('/ alt="[^"]*"/', " alt=\" \"", $imageElement);
                     $imageElement = preg_replace('/ title="[^"]*"/', "", $imageElement);
                     $output .= "<figure style=\"max-width:".$width."\" aria-labelledby=\"".$captionId."\"".$class.">\n";
                     $output .= $imageElement."\n";
