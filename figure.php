@@ -13,9 +13,9 @@ class YellowFigure {
     // Handle page content of shortcut
     public function onParseContentShortcut($page, $name, $text, $type) {
         $output = null;
-        if ($name=="figure" && $type=="inline") {
+        if ($name=="figure" && $type=="block") {
             if ($this->yellow->extension->isExisting("image")) {
-                $imageElement = $this->yellow->extension->get("image")->onParseContentShortcut($page, "image", $text, $type);
+                $imageElement = $this->yellow->extension->get("image")->onParseContentShortcut($page, "image", $text, "inline");
                 if (preg_match('/ alt="([^"]+)"/', $imageElement, $matches)) {
                     $caption = $matches[1];
                     $captionId = "caption-".uniqid();
