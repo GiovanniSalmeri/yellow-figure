@@ -4,10 +4,10 @@ figure { /* reset */
     display: inline-block;
     margin: 0;
 }
-.content figure.image img {
+.content figure.figure img {
     display: block;
 }
-.content figure.image figcaption {
+.content figure.figure figcaption {
     padding: 0.5em 0;
     font-size: 0.9em;
 }
