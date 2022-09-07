@@ -13,8 +13,11 @@ Use the shortcut `figure`, alone in a paragraph. Arguments, functionality and se
 Adding images with captions, with differents styles and sizes:
 
     [figure photo.jpg "This is the caption of the image"]
+
     [figure photo.jpg "This is the caption of the image" left]
+
     [figure photo.jpg "This is the caption of the image" right 50%]
+
     [figure photo.jpg "This is the caption of the image" right 320 200]
 
 ## Installation
