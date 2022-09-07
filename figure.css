@@ -1,13 +1,12 @@
 /* Figure extension, https://github.com/GiovanniSalmeri/yellow-figure */
 
-figure { /* reset */
+.content span.figure {
     display: inline-block;
-    margin: 0;
 }
-.content figure.figure img {
+.content span.figure img {
     display: block;
 }
-.content figure.figure figcaption {
+.content span.figure span {
     padding: 0.5em 0;
     font-size: 0.9em;
 }

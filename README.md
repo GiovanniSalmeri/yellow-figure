@@ -6,18 +6,15 @@ Images with captions.
 
 ## How to add a caption to an image
 
-Use the shortcut `figure`, alone in a paragraph. Arguments, functionality and settings are the same as for [Image](https://github.com/datenstrom/yellow-extensions/tree/master/source/image), except that the `Alt` argument is mandatory and used for the caption.
+Use the shortcut `figure`. Arguments, functionality and settings are the same as for [Image](https://github.com/datenstrom/yellow-extensions/tree/master/source/image), except that the `Alt` argument is mandatory and used for the caption.
 
 ## Examples
 
 Adding images with captions, with differents styles and sizes:
 
     [figure photo.jpg "This is the caption of the image"]
-
     [figure photo.jpg "This is the caption of the image" left]
-
     [figure photo.jpg "This is the caption of the image" right 50%]
-
     [figure photo.jpg "This is the caption of the image" right 320 200]
 
 ## Installation

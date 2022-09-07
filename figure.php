@@ -13,13 +13,13 @@ class YellowFigure {
     // Handle page content of shortcut
     public function onParseContentShortcut($page, $name, $text, $type) {
         $output = null;
-        if ($name=="figure" && $type=="block") {
+        if ($name=="figure" && $type=="inline") {
             if ($this->yellow->extension->isExisting("image")) {
-                $imageElement = $this->yellow->extension->get("image")->onParseContentShortcut($page, "image", $text, "inline");
+                $imageElement = $this->yellow->extension->get("image")->onParseContentShortcut($page, "image", $text, $type);
                 if (preg_match('/ alt="([^"]+)"/', $imageElement, $matches)) {
                     $caption = $matches[1];
                     $captionId = "caption-".uniqid();
-                    $captionElement = "<figcaption id=\"".$captionId."\">".$caption."</figcaption>\n";
+                    $captionElement = "<span id=\"".$captionId."\">".$caption."</span>\n";
                     preg_match('/ class="([^"]*)"/', $imageElement, $matches);
                     $class = " class=\"figure".($matches ? " ".$matches[1] : "")."\"";
                     preg_match('/ width="([^"]+)"/', $imageElement, $matches);
@@ -28,10 +28,10 @@ class YellowFigure {
                     $imageElement = preg_replace('/ class="[^"]*"/', "", $imageElement);
                     $imageElement = preg_replace('/ alt="[^"]*"/', " alt=\" \" aria-hidden=\"true\"", $imageElement);
                     $imageElement = preg_replace('/ title="[^"]*"/', "", $imageElement);
-                    $output .= "<figure style=\"max-width:".$width."\" aria-labelledby=\"".$captionId."\"".$class.">\n";
+                    $output .= "<span role=\"figure\" style=\"max-width:".$width."\" aria-labelledby=\"".$captionId."\"".$class.">\n";
                     $output .= $imageElement."\n";
                     $output .= $captionElement;
-                    $output .= "</figure>";
+                    $output .= "</span>";
                 } else {
                     $this->yellow->log("error", "Invalid format of image shortcut!");
                     $output = $imageElement;
