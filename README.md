@@ -4,7 +4,7 @@ Images with captions.
 
 <p align="center"><img src="figure-screenshot.png?raw=true" alt="Screenshot"></p>
 
-## How to add a caption to an image
+## How to add an image with caption
 
 Use the shortcut `figure`. Arguments, functionality and settings are the same as for [Image](https://github.com/datenstrom/yellow-extensions/tree/master/source/image), except that the `Alt` argument is mandatory and used for the caption.
 
