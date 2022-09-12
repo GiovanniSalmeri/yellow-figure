@@ -13,13 +13,15 @@ class YellowFigure {
     // Handle page content of shortcut
     public function onParseContentShortcut($page, $name, $text, $type) {
         $output = null;
-        if ($name=="figure" && $type=="inline") {
+        if ($name=="figure" && ($type=="inline" || $type=="block")) {
             if ($this->yellow->extension->isExisting("image")) {
-                $imageElement = $this->yellow->extension->get("image")->onParseContentShortcut($page, "image", $text, $type);
+                $imageElement = $this->yellow->extension->get("image")->onParseContentShortcut($page, "image", $text, "inline");
                 if (preg_match('/ alt="([^"]+)"/', $imageElement, $matches)) {
+                    $figureTag = [ "block"=>"figure", "inline"=>"span role=\"figure\"" ];
+                    $captionTag = [ "block"=>"figcaption", "inline"=>"span" ];
                     $caption = $matches[1];
                     $captionId = "caption-".uniqid();
-                    $captionElement = "<span id=\"".$captionId."\">".$caption."</span>\n";
+                    $captionElement = "<".$captionTag[$type]." id=\"".$captionId."\" class=\"figure-caption\">".$caption."</".strtok($captionTag[$type], " ").">\n";
                     preg_match('/ class="([^"]*)"/', $imageElement, $matches);
                     $class = " class=\"figure".($matches ? " ".$matches[1] : "")."\"";
                     preg_match('/ width="([^"]+)"/', $imageElement, $matches);
@@ -28,10 +30,10 @@ class YellowFigure {
                     $imageElement = preg_replace('/ class="[^"]*"/', "", $imageElement);
                     $imageElement = preg_replace('/ alt="[^"]*"/', " alt=\" \" aria-hidden=\"true\"", $imageElement);
                     $imageElement = preg_replace('/ title="[^"]*"/', "", $imageElement);
-                    $output .= "<span role=\"figure\" style=\"max-width:".$width."\" aria-labelledby=\"".$captionId."\"".$class.">\n";
+                    $output .= "<".$figureTag[$type]." style=\"max-width:".$width."\" aria-labelledby=\"".$captionId."\"".$class.">\n";
                     $output .= $imageElement."\n";
                     $output .= $captionElement;
-                    $output .= "</span>";
+                    $output .= "</".strtok($figureTag[$type], " ").">";
                 } else {
                     $this->yellow->log("error", "Invalid format of image shortcut!");
                     $output = $imageElement;
