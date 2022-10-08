@@ -19,7 +19,7 @@ Adding images with captions, with differents styles and sizes:
 
 ## Installation
 
-[Download extension](https://github.com/GiovanniSalmeri/yellow-figure/archive/master.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
+[Download extension](https://github.com/GiovanniSalmeri/yellow-figure/archive/main.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
 
 This extension requires [Image](https://github.com/annaesvensson/yellow-image) by Datenstrom.
 
