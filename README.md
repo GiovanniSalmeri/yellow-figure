@@ -25,4 +25,4 @@ This extension requires [Image](https://github.com/datenstrom/yellow-extensions/
 
 ## Developer
 
-Giovanni Salmeri. [Get help](https://github.com/GiovanniSalmeri/yellow-caption/issues).
+Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/)
