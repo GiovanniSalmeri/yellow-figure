@@ -6,7 +6,7 @@ Images with captions.
 
 ## How to add an image with caption
 
-Use the shortcut `figure`. Arguments, functionality and settings are the same as for [Image](https://github.com/datenstrom/yellow-extensions/tree/master/source/image), except that the `Alt` argument is mandatory and used for the caption.
+Use the shortcut `figure`. Arguments, functionality and settings are the same as for [Image](https://github.com/annaesvensson/yellow-image), except that the `Alt` argument is mandatory and used for the caption.
 
 ## Examples
 
@@ -21,7 +21,7 @@ Adding images with captions, with differents styles and sizes:
 
 [Download extension](https://github.com/GiovanniSalmeri/yellow-figure/archive/master.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
 
-This extension requires [Image](https://github.com/datenstrom/yellow-extensions/tree/master/source/image) by Datenstrom.
+This extension requires [Image](https://github.com/annaesvensson/yellow-image) by Datenstrom.
 
 ## Developer
 
