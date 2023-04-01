@@ -4,6 +4,10 @@ Images with captions.
 
 <p align="center"><img src="figure-screenshot.png?raw=true" alt="Screenshot"></p>
 
+## How to install an extension
+
+[Download ZIP file](https://github.com/GiovanniSalmeri/yellow-figure/archive/main.zip) and copy it into your `system/extensions` folder. [Learn more about extensions](https://github.com/annaesvensson/yellow-update).
+
 ## How to add an image with caption
 
 Use the shortcut `figure`. Arguments, functionality and settings are the same as for [Image](https://github.com/annaesvensson/yellow-image), except that the `Alt` argument is mandatory and used for the caption.
@@ -17,12 +21,10 @@ Adding images with captions, with differents styles and sizes:
     [figure photo.jpg "This is the caption of the image" right 50%]
     [figure photo.jpg "This is the caption of the image" right 320 200]
 
-## Installation
+## Acknowledgements
 
-[Download extension](https://github.com/GiovanniSalmeri/yellow-figure/archive/main.zip) and copy zip file into your `system/extensions` folder. Right click if you use Safari.
-
-This extension requires [Image](https://github.com/annaesvensson/yellow-image) by Datenstrom.
+This extension requires and uses [Image](https://github.com/annaesvensson/yellow-image) by Datenstrom. Thank you for the good work.
 
 ## Developer
 
-Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/)
+Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/).
