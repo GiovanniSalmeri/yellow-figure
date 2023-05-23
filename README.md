@@ -23,7 +23,7 @@ Adding images with captions, with differents styles and sizes:
 
 ## Acknowledgements
 
-This extension requires and uses [Image](https://github.com/annaesvensson/yellow-image) by Datenstrom. Thank you for the good work.
+This extension requires and uses [Image](https://github.com/annaesvensson/yellow-image) by Anna Svensson. Thank you for the good work.
 
 ## Developer
 
