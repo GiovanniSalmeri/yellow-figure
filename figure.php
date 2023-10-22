@@ -35,7 +35,7 @@ class YellowFigure {
                     $output .= $captionElement;
                     $output .= "</".strtok($figureTag[$type], " ").">";
                 } else {
-                    $this->yellow->log("error", "Invalid format of image shortcut!");
+                    $this->toolbox->log("error", "Invalid format of image shortcut!");
                     $output = $imageElement;
                 }
             } else {
