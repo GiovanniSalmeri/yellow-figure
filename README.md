@@ -1,4 +1,4 @@
-# Figure 0.8.20
+# Figure 0.9.1
 
 Images with captions.
 

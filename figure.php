@@ -2,7 +2,7 @@
 // Figure extension, https://github.com/GiovanniSalmeri/yellow-figure
 
 class YellowFigure {
-    const VERSION = "0.8.20";
+    const VERSION = "0.9.1";
     public $yellow;         // access to API
     
     // Handle initialisation
@@ -11,11 +11,11 @@ class YellowFigure {
     }
 
     // Handle page content of shortcut
-    public function onParseContentShortcut($page, $name, $text, $type) {
+    public function onParseContentElement($page, $name, $text, $attributes, $type) {
         $output = null;
         if ($name=="figure" && ($type=="inline" || $type=="block")) {
             if ($this->yellow->extension->isExisting("image")) {
-                $imageElement = $this->yellow->extension->get("image")->onParseContentShortcut($page, "image", $text, "inline");
+                $imageElement = $this->yellow->extension->get("image")->onParseContentElement($page, "image", $text, "", "inline");
                 if (preg_match('/ alt="([^"]+)"/', $imageElement, $matches)) {
                     $figureTag = [ "block"=>"figure", "inline"=>"span role=\"figure\"" ];
                     $captionTag = [ "block"=>"figcaption", "inline"=>"span" ];
@@ -49,8 +49,8 @@ class YellowFigure {
     public function onParsePageExtra($page, $name) {
         $output = null;
         if ($name=="header") {
-            $extensionLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreExtensionLocation");
-            $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$extensionLocation}figure.css\" />\n";
+            $assetLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreAssetLocation");
+            $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$assetLocation}figure.css\" />\n";
         }
         return $output;
     }
