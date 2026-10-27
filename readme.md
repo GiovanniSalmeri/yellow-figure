@@ -1,8 +1,8 @@
-# Figure 0.9.1
+# Figure 1.0.0
 
-Images with captions.
+Images with captions. Developed by Giovanni Salmeri.
 
-<p align="center"><img src="SCREENSHOT.png" alt="Screenshot"></p>
+<p align="center"><img src="screenshot.png" alt="Screenshot"></p>
 
 ## How to install an extension
 
@@ -25,6 +25,4 @@ Adding images with captions, with differents styles and sizes:
 
 This extension requires and uses [Image](https://github.com/annaesvensson/yellow-image) by Anna Svensson. Thank you for the good work.
 
-## Developer
-
-Giovanni Salmeri. [Get help](https://datenstrom.se/yellow/help/).
+Do you have questions? [Get help](https://datenstrom.se/yellow/help/).

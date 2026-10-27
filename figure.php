@@ -2,7 +2,7 @@
 // Figure extension, https://github.com/GiovanniSalmeri/yellow-figure
 
 class YellowFigure {
-    const VERSION = "0.9.1";
+    const VERSION = "1.0.0";
     public $yellow;         // access to API
     
     // Handle initialisation
@@ -50,7 +50,7 @@ class YellowFigure {
         $output = null;
         if ($name=="header") {
             $assetLocation = $this->yellow->system->get("coreServerBase").$this->yellow->system->get("coreAssetLocation");
-            $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$assetLocation}figure.css\" />\n";
+            $output = "<link rel=\"stylesheet\" media=\"all\" href=\"{$assetLocation}figure.css\" />\n";
         }
         return $output;
     }
